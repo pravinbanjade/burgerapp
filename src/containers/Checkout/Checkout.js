@@ -7,20 +7,6 @@ import ContactData from './ContactData/ContactData';
 
 class Checkout extends Component {
 
-  componentWillMount() {
-    const query = new URLSearchParams(this.props.location.search);
-    const ingredient = {};
-    let price = 0;
-    for(let param of query.entries()) {
-      if(param[0] === 'price') {
-        price = param[1];
-      } else {
-        ingredient[param[0]] = +param[1];
-      }
-    }
-    this.setState({ ingredient: ingredient, totalPrice: price });
-  }
-
   checkoutCancelledHandler = () => {
     this.props.history.goBack();
   }
@@ -32,8 +18,10 @@ class Checkout extends Component {
   render() {
     let summary = <Redirect to='/' />
     if(this.props.ings) {
+      const purchasedRedirect = this.props.purchased ? <Redirect to="/" /> : null;
       summary = (
         <div>
+          { purchasedRedirect }
           <CheckoutSummary
             ingredient={this.props.ings}
             checkoutCancelled={this.checkoutCancelledHandler}
@@ -50,7 +38,8 @@ class Checkout extends Component {
 
 const mapStateToProps = state => {
   return {
-    ings: state.burgerBuilder.ingredient
+    ings: state.burgerBuilder.ingredient,
+    purchased: state.order.purchased
   }
 }
 
