@@ -29,7 +29,8 @@ class Auth extends Component {
         elementType: 'input',
         elementConfig: {
           type: 'password',
-          placeholder: 'Enter Password'
+          placeholder: 'Enter Password',
+          autoComplete: 'current-password'
         },
         value: '',
         validation: {
