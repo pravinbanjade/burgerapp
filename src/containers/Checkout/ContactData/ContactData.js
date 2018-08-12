@@ -127,7 +127,8 @@ class ContactData extends Component {
     const order = {
         ingredient: this.props.ings,
         price: this.props.price,
-        orderData: formData
+        orderData: formData,
+        userId: this.props.userId
     };
     this.props.onOrderBurger(order, this.props.token);
   }
@@ -216,7 +217,8 @@ const mapStateToProps = state => {
     ings: state.burgerBuilder.ingredient,
     price: state.burgerBuilder.totalPrice,
     loading: state.order.loading,
-    token: state.auth.token
+    token: state.auth.token,
+    userId: state.auth.userId
   }
 }
 
