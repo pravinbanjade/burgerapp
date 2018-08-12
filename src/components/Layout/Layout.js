@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 import Aux from '../../hoc/Auxi';
 import classes from './Layout.css';
@@ -46,4 +47,4 @@ const mapStateToProps = state => {
     }
 };
 
-export default connect(mapStateToProps)(Layout);
+export default withRouter(connect(mapStateToProps)(Layout));
