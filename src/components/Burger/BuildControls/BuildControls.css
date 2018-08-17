@@ -18,11 +18,11 @@
   font-family: inherit;
   font-size: 1.2rem;
   padding: 15px 30px;
-  box-shadow: 2px 2px 2px #966909;
 }
 
 .OrderButton:hover .OrderButton:active {
   background-color: #a0db41;
+  box-shadow: 0 4px 20px 0 rgba(150, 105, 9,.14), 0 7px 12px -5px rgba(150, 105, 9,.46);
 }
 
 .OrderButton:disabled {

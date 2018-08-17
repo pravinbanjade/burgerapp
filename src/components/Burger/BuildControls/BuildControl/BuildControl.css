@@ -12,6 +12,7 @@
   margin: 0 5px;
   width: 80px;
   border: 1px solid #aa6971;
+  border-radius: 4px;
 }
 
 .BuildControl button:disabled {
