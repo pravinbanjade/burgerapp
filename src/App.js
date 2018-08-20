@@ -7,6 +7,7 @@ import BurgerBuilder from './containers/BurgerBuilder/BurgerBuilder';
 import Logout from './containers/Auth/Logout/Logout';
 import Home from './components/Homepage/Homepage';
 import * as actions from './store/actions/index';
+import My404Component from './components/My404Component/My404Component';
 
 const asyncCheckout = asyncComponent(() => {
     return import('./containers/Checkout/Checkout');
@@ -30,7 +31,7 @@ class App extends Component {
                 <Route path="/auth" component={asyncAuth} />
                 <Route path="/burgerapp" exact component={BurgerBuilder} />
                 <Route path="/" exact component={Home} />
-                <Redirect to="/burgerapp" />
+                <Route path="*" component={My404Component} />
             </Switch>
         )
 
@@ -43,7 +44,7 @@ class App extends Component {
                     <Route path="/logout" component={Logout} />
                     <Route path="/burgerapp" exact component={BurgerBuilder} />
                     <Route path="/" exact component={Home} />
-                    <Redirect to="/burgerapp" />
+                    <Route path="*" component={My404Component} />
                 </Switch>
             )
         }
