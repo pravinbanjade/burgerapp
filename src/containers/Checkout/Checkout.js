@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 
 import CheckoutSummary from '../../components/Order/CheckoutSummary/CheckoutSummary';
 import ContactData from './ContactData/ContactData';
+import Layout from '../../components/Layout/Layout';
 
 class Checkout extends Component {
 
@@ -32,7 +33,11 @@ class Checkout extends Component {
         </div>
       );
     }
-    return summary;
+    return (
+        <Layout>
+            {summary}
+        </Layout>
+    );
   }
 }
 

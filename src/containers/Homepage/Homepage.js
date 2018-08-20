@@ -3,6 +3,9 @@ import React, { Component } from 'react';
 import HomeLayout from './HomeLayout/HomeLayout';
 
 class Home extends Component {
+    componentDidMount() {
+        document.title = 'Pravin Banjade';
+    }
     render() {
         return (
             <HomeLayout>
