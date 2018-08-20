@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import HomeLayout from './HomeLayout/HomeLayout';
+import Parallax from '../../components/Homepage/Parallax/Parallax';
 
 class Home extends Component {
     componentDidMount() {
@@ -9,7 +10,7 @@ class Home extends Component {
     render() {
         return (
             <HomeLayout>
-                <h1>HomePage</h1>
+                <Parallax />
             </HomeLayout>
         )
     }

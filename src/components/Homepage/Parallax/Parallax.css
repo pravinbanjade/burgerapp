@@ -1,0 +1,20 @@
+.Parallax {
+    background: linear-gradient(
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)),
+                url('../../../assets/images/pravin.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.Hero {
+    text-align: center;
+    padding-top: 10%;
+    color: #fff;
+}
+
+.Hero p {
+    font-size: 26px;
+    font-family: 'Concert One', Roboto, sans-serif;
+}
