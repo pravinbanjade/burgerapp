@@ -10,6 +10,7 @@ import axios from '../../axios-orders';
 import Spinner from '../../components/UI/Spinner/Spinner';
 import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
 import * as actions from '../../store/actions/index';
+import Layout from '../../components/Layout/Layout';
 
 class BurgerBuilder extends Component {
   state = {
@@ -77,12 +78,12 @@ class BurgerBuilder extends Component {
         price={this.props.price} />;
     }
     return (
-      <Aux>
+      <Layout>
         <Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler}>
           {orderSummary}
         </Modal>
         {burger}
-      </Aux>
+      </Layout>
     )
   }
 }

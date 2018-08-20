@@ -1,6 +1,7 @@
 import React from 'react';
 
 import classes from './Order.css';
+import Layout from '../Layout/Layout';
 
 const order = (props) => {
   const ingredient = [];
@@ -25,10 +26,12 @@ const order = (props) => {
   ));
 
   return (
-    <div className={classes.Order}>
-      <p>Ingredients: {ingredientOutput}</p>
-      <p>Price: <strong>NRS {props.price.toFixed(2)}</strong></p>
-    </div>
+      <Layout>
+          <div className={classes.Order}>
+            <p>Ingredients: {ingredientOutput}</p>
+            <p>Price: <strong>NRS {props.price.toFixed(2)}</strong></p>
+          </div>
+      </Layout>
   )
 }
 

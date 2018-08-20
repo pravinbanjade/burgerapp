@@ -3,9 +3,9 @@ import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import asyncComponent from './hoc/asyncComponent/asyncComponent';
-import Layout from './components/Layout/Layout';
 import BurgerBuilder from './containers/BurgerBuilder/BurgerBuilder';
 import Logout from './containers/Auth/Logout/Logout';
+import Home from './components/Homepage/Homepage';
 import * as actions from './store/actions/index';
 
 const asyncCheckout = asyncComponent(() => {
@@ -28,8 +28,9 @@ class App extends Component {
         let routes = (
             <Switch>
                 <Route path="/auth" component={asyncAuth} />
-                <Route path="/" exact component={BurgerBuilder} />
-                <Redirect to="/" />
+                <Route path="/burgerapp" exact component={BurgerBuilder} />
+                <Route path="/" exact component={Home} />
+                <Redirect to="/burgerapp" />
             </Switch>
         )
 
@@ -40,17 +41,16 @@ class App extends Component {
                     <Route path="/orders" component={asyncOrders} />
                     <Route path="/auth" component={asyncAuth} />
                     <Route path="/logout" component={Logout} />
-                    <Route path="/" exact component={BurgerBuilder} />
-                    <Redirect to="/" />
+                    <Route path="/burgerapp" exact component={BurgerBuilder} />
+                    <Route path="/" exact component={Home} />
+                    <Redirect to="/burgerapp" />
                 </Switch>
             )
         }
         return (
             <BrowserRouter>
-                <Layout>
                     {routes}
-                </Layout>
-          </BrowserRouter>
+            </BrowserRouter>
         );
     }
 }

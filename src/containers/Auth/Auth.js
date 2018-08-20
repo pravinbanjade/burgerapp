@@ -8,6 +8,7 @@ import Spinner from '../../components/UI/Spinner/Spinner';
 import classes from './Auth.css';
 import * as actions from '../../store/actions/index';
 import { updateObject, checkValidity } from '../../shared/utility';
+import Layout from '../../components/Layout/Layout';
 
 class Auth extends Component {
 
@@ -48,7 +49,7 @@ class Auth extends Component {
   }
 
   componentDidMount () {
-        if ( !this.props.buildingBurger && this.props.authRedirectPath !== '/' ) {
+        if ( !this.props.buildingBurger && this.props.authRedirectPath !== '/burgerapp' ) {
             this.props.onSetAuthRedirectPath();
         }
     }
@@ -113,17 +114,22 @@ class Auth extends Component {
     }
 
     return(
-      <div className={classes.Auth}>
-        { authRedirect }
-        {errorMessage}
-        <form onSubmit={this.submitHandler}>
-          {form}
-          <Button btnType="Success">SUBMIT</Button>
-        </form>
-        <Button
-            clicked={this.switchAuthModeHandler}
-            btnType="Danger">SWITCH TO { this.state.isSignUp ? 'SIGN IN' : 'SIGN UP' }</Button>
-      </div>
+        <Layout>
+            <div className={classes.Auth}>
+              { authRedirect }
+              {errorMessage}
+              <h3>{ this.state.isSignUp ? 'Sign up' : 'Login' } to Burger App</h3>
+              <form onSubmit={this.submitHandler}>
+                {form}
+                <Button btnType="Success">SUBMIT</Button>
+              </form>
+              <hr style={{ borderColor: 'rgba(0,0,0,.1)' }} />
+              <p>{ this.state.isSignUp ? 'Already' : 'Not' } a Member?</p>
+              <Button
+                  clicked={this.switchAuthModeHandler}
+                  btnType="Danger">SWITCH TO { this.state.isSignUp ? 'SIGN IN' : 'SIGN UP' }</Button>
+            </div>
+        </Layout>
     )
   }
 }
@@ -141,7 +147,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     onAuth: (email, password, isSignUp) => dispatch(actions.auth(email, password, isSignUp)),
-    onSetAuthRedirectPath: () => dispatch( actions.setAuthRedirectPath( '/' ) )
+    onSetAuthRedirectPath: () => dispatch( actions.setAuthRedirectPath( '/burgerapp' ) )
   }
 };
 
