@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import asyncComponent from './hoc/asyncComponent/asyncComponent';
 import BurgerBuilder from './containers/BurgerBuilder/BurgerBuilder';
 import Logout from './containers/Auth/Logout/Logout';
-import Home from './components/Homepage/Homepage';
+import Home from './containers/Homepage/Homepage';
 import * as actions from './store/actions/index';
 import My404Component from './components/My404Component/My404Component';
 
