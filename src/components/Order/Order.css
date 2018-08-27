@@ -3,6 +3,51 @@
   box-shadow: 0 4px 20px 0 rgba(0,0,0,.14);
   border-radius: 4px;
   padding: 10px;
-  margin: 10px auto;
+  margin: 20px auto;
   box-sizing: border-box;
+}
+
+.Ingredients {
+}
+
+.Burger {
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+.Close {
+    background: #fff;
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+.Close:after {
+    content: '';
+    height: 30px;
+    border-left: 2px solid rgba(0,0,0,.5);
+    position: absolute;
+    transform: rotate(45deg);
+    left: 14px;
+}
+
+.Close:before {
+    content: '';
+    height: 30px;
+    border-left: 2px solid rgba(0,0,0,.5);
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 14px;
+}
+
+.Close:hover::after, .Close:hover::before {
+    border-color: #dc3545;
+    transition: all .3s ease-in-out;
+}
+
+@media (min-width: 1100px) {
+    .Order {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }

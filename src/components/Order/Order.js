@@ -1,7 +1,7 @@
 import React from 'react';
 
 import classes from './Order.css';
-import Layout from '../Layout/Layout';
+import Burger from '../Burger/Burger';
 
 const order = (props) => {
   const ingredient = [];
@@ -26,12 +26,16 @@ const order = (props) => {
   ));
 
   return (
-      <Layout>
-          <div className={classes.Order}>
-            <p>Ingredients: {ingredientOutput}</p>
-            <p>Price: <strong>NRS {props.price.toFixed(2)}</strong></p>
-          </div>
-      </Layout>
+        <div className={classes.Order}>
+            <div className={classes.Ingredients}>
+                <p>Ingredients: {ingredientOutput}</p>
+                <p>Price: <strong>NRS {props.price.toFixed(2)}</strong></p>
+            </div>
+            <div className={classes.Burger}>
+                <Burger ingredient={props.ingredient} />
+            </div>
+            <div className={classes.Close}></div>
+        </div>
   )
 }
 
