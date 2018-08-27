@@ -10,25 +10,25 @@ import Layout from '../../components/Layout/Layout';
 
 class Orders extends Component {
 
-  componentDidMount() {
-    this.props.onFetchOrders(this.props.token, this.props.userId);
-  }
-
-  render() {
-    let orders = <Spinner />
-    if(!this.props.loading) {
-      orders = (
-        <Layout>
-          {this.props.orders.map(order => (
-            <Order key={order.id}
-                ingredient={order.ingredient}
-                price={+order.price} />
-            ))}
-        </Layout>
-      )
+    componentDidMount() {
+        this.props.onFetchOrders(this.props.token, this.props.userId);
     }
-    return orders;
-  }
+
+    render() {
+        let orders = <Spinner />
+        if(!this.props.loading) {
+            orders = (
+                <Layout>
+                  {this.props.orders.map(order => (
+                    <Order key={order.id}
+                        ingredient={order.ingredient}
+                        price={+order.price} />
+                    ))}
+                </Layout>
+            )
+        }
+        return orders;
+    }
 }
 
 const mapStateToProps = state => {

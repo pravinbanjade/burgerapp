@@ -5,7 +5,7 @@
                 url('../../../assets/images/pravin.jpg') no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
-    height: 100vh;
+    height: 80vh;
 }
 
 .Hero {
@@ -16,5 +16,5 @@
 
 .Hero p {
     font-size: 26px;
-    font-family: 'Concert One', Roboto, sans-serif;
+    font-family: 'Modern Antiqua', sans-serif;
 }

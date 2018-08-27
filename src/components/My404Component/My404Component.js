@@ -5,7 +5,7 @@ import classes from './My404Component.css';
 
 const my404Component = () => (
     <div className={classes.My404Component}>
-        <h2>This is shame but sorry you are not authorized to visit this page.</h2>
+        <h2>We are extremely sorry <span role="img" aria-label="jsx-a11y/accessible-emoji">😥</span> but you are not authorized to visit this page.</h2>
         <Link to="/burgerapp">Return to Homepage</Link>
     </div>
 )

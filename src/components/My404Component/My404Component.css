@@ -1,3 +1,27 @@
 .My404Component {
     text-align: center;
+    background: url('../../assets/images/rain.jpg') no-repeat center center;
+    background-size: cover;
+    height: 80vh;
+    left: 0;
+    right: 0;
+    position: absolute;
+    padding-top: 20vh;
+    font-family: 'Modern Antiqua', sans-serif;
+    text-transform: uppercase;
+}
+
+.My404Component h2 {
+    width: 60%;
+    margin: 20px auto;
+}
+
+.My404Component a {
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.My404Component a:hover {
+    text-decoration: underline;
 }
