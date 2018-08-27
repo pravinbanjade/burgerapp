@@ -34,7 +34,9 @@ const order = (props) => {
             <div className={classes.Burger}>
                 <Burger ingredient={props.ingredient} />
             </div>
-            <div className={classes.Close}></div>
+            {
+                // <div className={classes.Close}></div>
+            }
         </div>
   )
 }

@@ -61,6 +61,26 @@ export const fetchOrdersStart = () => {
   }
 }
 
+export const deleteOrdersSuccess = (orders) => {
+  return {
+    type: actionTypes.DELETE_ORDERS_SUCCESS,
+    orders: orders
+  }
+}
+
+export const deleteOrdersFail = (error) => {
+  return {
+    type: actionTypes.DELETE_ORDERS_FAIL,
+    error: error
+  }
+}
+
+export const deleteOrdersStart = () => {
+  return {
+    type: actionTypes.DELETE_ORDERS_START
+  }
+}
+
 export const fetchOrders = (token, userId) => {
   return dispatch => {
     dispatch(fetchOrdersStart());
@@ -80,4 +100,25 @@ export const fetchOrders = (token, userId) => {
           dispatch(fetchOrdersFail(err))
         });
   }
+}
+
+export const deleteOrders = (token, userId) => {
+    return dispatch => {
+        dispatch(deleteOrdersStart());
+        const queryParams = '?auth=' + token + '&orderBy="userId"&equalTo="' + userId + '"';
+        axios.delete('/orders.json' + queryParams)
+            .then(res => {
+            const deletedOrders = [];
+            for(let key in res.data) {
+              deletedOrders.push({
+                ...res.data[key],
+                id: key
+              });
+            }
+            dispatch(deleteOrdersSuccess(deletedOrders));
+            })
+            .catch(err => {
+            dispatch(deleteOrdersFail(err))
+            });
+    }
 }
