@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 
 import Input from '../../components/UI/Input/Input';
 import Button from '../../components/UI/Button/Button';
@@ -8,7 +8,7 @@ import Spinner from '../../components/UI/Spinner/Spinner';
 import classes from './Auth.css';
 import * as actions from '../../store/actions/index';
 import { updateObject, checkValidity } from '../../shared/utility';
-import Layout from '../../components/Layout/Layout';
+// import Layout from '../../components/Layout/Layout';
 
 class Auth extends Component {
 
@@ -114,11 +114,11 @@ class Auth extends Component {
     }
 
     return(
-        <Layout>
+        <div className={classes.Background}>
             <div className={classes.Auth}>
               { authRedirect }
               {errorMessage}
-              <h3>{ this.state.isSignUp ? 'Sign up' : 'Login' } to Burger App</h3>
+              <h3>{ this.state.isSignUp ? 'Sign up' : 'Login' } to Burger App <span role="img" aria-label="jsx-a11y/accessible-emoji">🍔</span></h3>
               <form onSubmit={this.submitHandler}>
                 {form}
                 <Button btnType="Success">SUBMIT</Button>
@@ -129,7 +129,8 @@ class Auth extends Component {
                   clicked={this.switchAuthModeHandler}
                   btnType="Danger">SWITCH TO { this.state.isSignUp ? 'SIGN IN' : 'SIGN UP' }</Button>
             </div>
-        </Layout>
+            <Link to="/burgerapp"><Button>Back To Home</Button></Link>
+        </div>
     )
   }
 }
