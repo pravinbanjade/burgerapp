@@ -18,6 +18,7 @@
   font-family: inherit;
   font-size: 1.2rem;
   padding: 15px 30px;
+  margin-top: 20px;
 }
 
 .OrderButton:hover .OrderButton:active {

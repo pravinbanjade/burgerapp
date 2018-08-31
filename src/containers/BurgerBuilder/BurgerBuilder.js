@@ -19,7 +19,6 @@ class BurgerBuilder extends Component {
 
   componentDidMount() {
     this.props.onInitIngredients()
-    document.title = 'Burger App';
   }
 
   updatePurchaseState(ingredient) {
