@@ -1,7 +1,7 @@
 {
   "name": "burger-app",
   "version": "0.1.0",
-  "homepage": "https://pravinbanjade.github.io/burgerapp/",
+  "homepage": "https://pravinbanjade.github.io/burgerapp",
   "private": true,
   "dependencies": {
     "autoprefixer": "7.1.6",
