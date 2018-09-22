@@ -104,7 +104,7 @@ class Auth extends Component {
     let errorMessage = null;
     if(this.props.error) {
         errorMessage = (
-            <p>{this.props.error.message}</p>
+            <p><span role="img" aria-label="jsx-a11y/accessible-emoji">😱</span> {this.props.error.message}</p>
         )
     }
 
