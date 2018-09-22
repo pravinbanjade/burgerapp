@@ -6,7 +6,10 @@ import PropTypes from 'prop-types';
 class BurgerIngredient extends Component {
   render() {
     let ingredient = null;
-
+    let seeds = [];
+    for(let i = 0; i < 9; i++) {
+       seeds.push (<div key={i} className={classes.Seeds}></div>)
+    }
     switch ( this.props.types ) {
       case ('bread-bottom'):
         ingredient = <div className={classes.BreadBottom}></div>;
@@ -14,8 +17,7 @@ class BurgerIngredient extends Component {
       case ('bread-top'):
         ingredient = (
           <div className={classes.BreadTop}>
-            <div className={classes.Seeds1}></div>
-            <div className={classes.Seeds2}></div>
+            {seeds}
           </div>
         );
         break;

@@ -17,47 +17,69 @@
     position: relative;
 }
 
-.Seeds1 {
-    width: 10%;
-    height: 15%;
+.Seeds {
+    width: 6%;
+    height: 12%;
     position: absolute;
     background-color: white;
     left: 30%;
     top: 50%;
     border-radius: 40%;
-    transform: rotate(-20deg);
+    transform: rotate(0deg);
     box-shadow: inset -2px -3px #c9c9c9;
 }
 
-.Seeds1:after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: white;
-    left: -170%;
-    top: -260%;
-    border-radius: 40%;
+.Seeds:nth-child(2) {
+    left: 10%;
+    top: 40%;
     transform: rotate(60deg);
-    box-shadow: inset -1px 2px #c9c9c9;
-  }
+}
 
-.Seeds1:before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: white;
-    left: 180%;
-    top: -50%;
-    border-radius: 40%;
-    transform: rotate(60deg);
-    box-shadow: inset -1px -3px #c9c9c9;
-  }
+.Seeds:nth-child(3) {
+    left: 20%;
+    top: 60%;
+    transform: rotate(-50deg);
+}
 
-  .Seeds2 {
-    width: 10%;
-    height: 15%;
+.Seeds:nth-child(4) {
+    left: 40%;
+    top: 20%;
+    transform: rotate(45deg);
+}
+
+.Seeds:nth-child(5) {
+    left: 50%;
+    top: 80%;
+    transform: rotate(-30deg);
+}
+
+.Seeds:nth-child(6) {
+    left: 60%;
+    top: 40%;
+    transform: rotate(90deg);
+}
+
+.Seeds:nth-child(7) {
+    left: 70%;
+    top: 20%;
+    transform: rotate(10deg);
+}
+
+.Seeds:nth-child(8) {
+    left: 80%;
+    top: 80%;
+    transform: rotate(-30deg);
+}
+
+.Seeds:nth-child(9) {
+    left: 90%;
+    top: 50%;
+    transform: rotate(10deg);
+}
+
+.Seeds2 {
+    width: 5%;
+    height: 10%;
     position: absolute;
     background-color: white;
     left: 64%;
@@ -65,21 +87,33 @@
     border-radius: 40%;
     transform: rotate(10deg);
     box-shadow: inset -3px 0 #c9c9c9;
-  }
+}
 
-  .Seeds2:before {
+.Seeds2:before {
     content: "";
     width: 100%;
     height: 100%;
     position: absolute;
     background-color: white;
-    left: 150%;
+    left: 250%;
     top: -130%;
     border-radius: 40%;
     transform: rotate(90deg);
     box-shadow: inset 1px 3px #c9c9c9;
-  }
+}
 
+.Seeds2:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: white;
+    left: -270%;
+    top: -60%;
+    border-radius: 40%;
+    transform: rotate(60deg);
+    box-shadow: inset -1px 2px #c9c9c9;
+  }
 
 .Meat {
     width: 80%;
