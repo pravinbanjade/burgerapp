@@ -5,15 +5,32 @@
     flex-flow: column;
     justify-content: space-around;
     align-items: center;
-    padding: 10px 0;
+    padding: 15px 0;
     box-sizing: border-box;
     cursor: pointer;
+    transition: .2s cubic-bezier(0.37, 0.34, 1, 1.44);
+}
+
+.DrawerToggle:hover {
+    padding: 12px 0;
 }
 
 .DrawerToggle div {
     width: 90%;
-    height: 3px;
-    background-color: white;
+    height: 4px;
+    border-radius: 8px;
+}
+
+.DrawerToggle div:nth-child(1) {
+    background-color: #eba73c;
+}
+
+.DrawerToggle div:nth-child(2) {
+    background-color: #fff;
+}
+
+.DrawerToggle div:nth-child(3) {
+    background-color: #eba73c;
 }
 
 @media (min-width: 500px) {
