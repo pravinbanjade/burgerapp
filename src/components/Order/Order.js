@@ -15,14 +15,7 @@ const order = (props) => {
   const ingredientOutput = ingredient.map(ig => (
     <span
       key={ig.name}
-      style={{
-        textTransform: 'capitalize',
-        display: 'inline-block',
-        margin: '0 8px',
-        border: '1px solid #ccc',
-        padding: '4px',
-        cursor: 'default'
-      }}>{ig.name} ({ig.amount})</span>
+      className={classes.Ingredient}>{ig.name} <span className={classes.Badge}>{ig.amount}</span></span>
   ));
 
   return (

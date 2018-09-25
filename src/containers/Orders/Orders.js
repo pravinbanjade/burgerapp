@@ -7,6 +7,7 @@ import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
 import * as actions from '../../store/actions/index';
 import Spinner from '../../components/UI/Spinner/Spinner';
 import Layout from '../../components/Layout/Layout';
+import classes from './Orders.css';
 
 class Orders extends Component {
 
@@ -19,11 +20,13 @@ class Orders extends Component {
         if(!this.props.loading) {
             orders = (
                 <Layout>
-                  {this.props.orders.map(order => (
-                    <Order key={order.id}
-                        ingredient={order.ingredient}
-                        price={+order.price} />
-                    ))}
+                    <div className={classes.Background}>
+                        {this.props.orders.map(order => (
+                          <Order key={order.id}
+                              ingredient={order.ingredient}
+                              price={+order.price} />
+                          ))}
+                    </div>
                 </Layout>
             )
         }

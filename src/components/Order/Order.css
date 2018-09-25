@@ -5,9 +5,18 @@
   padding: 10px;
   margin: 20px auto;
   box-sizing: border-box;
+  background-color: #fff;
 }
 
-.Ingredients {
+.Ingredient {
+    text-transform: capitalize;
+    display: inline-block;
+    margin: 0 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 4px;
+    cursor: default;
+    position: relative;
 }
 
 .Burger {
@@ -15,7 +24,7 @@
     overflow-y: scroll;
 }
 
-.Close {
+/* .Close {
     background: #fff;
     width: 30px;
     height: 30px;
@@ -42,7 +51,7 @@
 .Close:hover::after, .Close:hover::before {
     border-color: #dc3545;
     transition: all .3s ease-in-out;
-}
+} */
 
 @media (min-width: 1100px) {
     .Order {
@@ -50,4 +59,24 @@
         justify-content: space-between;
         align-items: center;
     }
+}
+
+.Badge {
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    top: -8px;
+    right: -8px;
+    background: red;
+    border-radius: 100%;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 11px;
+    transition: .2s ease-in-out;
+}
+
+.Ingredient:hover .Badge {
+    transform: scale(1.3);
 }
