@@ -6,31 +6,22 @@
                 url('../../assets/images/home.jpg') no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
-}
-
-.Hero, .Hero2 {
-    font-family: 'Modern Antiqua', 'Titillium Web', sans-serif;
-    color: #fff;
-    font-size: 28px;
     text-align: center;
-    width: 70%;
-    margin: auto;
-    text-shadow: 3px 3px 5px #000;
 }
 
 .Hero {
+    font-family: 'Modern Antiqua', 'Titillium Web', sans-serif;
+    color: #fff;
+    font-size: 28px;
+    width: 70%;
+    margin: auto;
+    text-shadow: 3px 3px 5px #000;
     padding-top: 30vh;
-}
-
-.Hero2 {
-    padding: 20px;
+    padding-bottom: 20px;
 }
 
 @media (min-width: 500px) {
     .Hero {
-        width: 300px;
-    }
-    .Hero2 {
-        width: 380px;
+        width: 340px;
     }
 }
