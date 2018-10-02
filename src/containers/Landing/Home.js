@@ -15,6 +15,9 @@ class Home extends Component {
                     <div className={classes.Hero}>
                         Build Your Own Burger
                     </div>
+                    <div className={classes.Hero2}>
+                        Like Never Before
+                    </div>
                     <Link to='/burgerapp'>
                         <Button>Build Now</Button>
                     </Link>
