@@ -75,23 +75,15 @@
 }
 
 .Burger1 {
-    top: 20%;
-    left: 40%;
     height: 250px;
-    position: absolute;
     box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
     border-radius: 3px;
-    animation: Floating 5s ease-in-out infinite;
 }
 
 .Burger2 {
-    top: 0;
-    left: 15%;
     height: 200px;
-    position: absolute;
     box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
     border-radius: 3px;
-    animation: Floating 10s ease-in-out infinite;
 }
 
 @keyframes Floating {
@@ -104,4 +96,21 @@
 100% {
     transform: translate(0, -0px);
 }
+}
+
+@media (min-width: 700px) {
+    .Burger1 {
+        top: 20%;
+        left: 40%;
+        position: absolute;
+        animation: Floating 5s ease-in-out infinite;
+    }
+
+    .Burger2 {
+        top: 0;
+        left: 15%;
+        height: 200px;
+        position: absolute;
+        animation: Floating 10s ease-in-out infinite;
+    }
 }
