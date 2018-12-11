@@ -45,7 +45,7 @@ class Auth extends Component {
         touched: false
       }
     },
-    isSignUp: true
+    isSignUp: false
   }
 
   componentDidMount () {
@@ -124,7 +124,7 @@ class Auth extends Component {
                 <Button btnType="Success">SUBMIT</Button>
               </form>
               <hr style={{ borderColor: 'rgba(0,0,0,.1)' }} />
-              <p>{ this.state.isSignUp ? 'Already' : 'Not' } a Member?</p>
+              <p>{ this.state.isSignUp ? 'Already a Member' : 'New to us' } ?</p>
               <Button
                   clicked={this.switchAuthModeHandler}
                   btnType="Danger">SWITCH TO { this.state.isSignUp ? 'SIGN IN' : 'SIGN UP' }</Button>
